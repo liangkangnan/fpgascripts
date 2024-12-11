@@ -74,6 +74,8 @@ formats = {
 	"isim":  lambda f, i: "verilog work {} {}\n".format(" ".join(f), " ".join("-i " + inc for inc in i)),
 	"flat":  lambda f, i: " ".join(f) + "\n",
 	"flati": lambda f, i: " ".join(i) + "\n",
+    "line":  lambda f, i: "\n".join(f) + "\n",
+    "linei": lambda f, i: "\n".join(i) + "\n",
 	"make":  lambda f, i: "SRCS={}\nINCDIRS={}\n".format(" ".join(f), " ".join(i))
 }
 
